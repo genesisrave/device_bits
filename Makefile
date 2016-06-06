@@ -1,5 +1,5 @@
-CC = %vrxsdk%\bin\vrxcc
-HR = %vrxsdk%\bin\vrxhdr
+CC = C:\VerixVAps\VRXSDK\bin\vrxcc
+HR = C:\VerixVAps\VRXSDK\bin\vrxhdr
 CFLAGS += -vv -b
 LFLAGS += -b
 EFLAGS += -e
