@@ -1,10 +1,15 @@
-#### Machine Generated Build File #####
-LOBJS =
-NO_TLIB=TRUE
+CC = %vrxsdk%\bin\vrxcc
+HR = %vrxsdk%\bin\vrxhdr
+CFLAGS += -vv -b
+LFLAGS += -b
+EFLAGS += -e
+LIBFLAGS +=
 
-CLEAN = *.axf *.bak *.s *.lib *.a *.sct *.map
+all : getUsbDeviceBits.out
 
-INCLUDE = $(TESTROOT)\config
-!include <make.defines>
 
-all: getUsbDeviceBits.o getUsbDeviceBits.out getUsbDeviceBits.p7s
+getUsbDeviceBits.out : getUsbDeviceBits.c
+	$(CC) $(CFLAGS) $(EFLAGS) getUsbDeviceBits.err getUsbDeviceBits.c -o getUsbDeviceBits.out
+
+clean :
+	del *.o *.out *.p7s *.err
